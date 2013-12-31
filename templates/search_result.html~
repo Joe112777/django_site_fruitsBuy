@@ -1,0 +1,11 @@
+<p>You searched for:<strong>{{ query }}</strong><p>
+{% if fruits %}
+    <p>Found {{ fruits|length }} quantity {{ fruits|pluralize }}.</p>
+    <ul>
+        {% for one in fruits %}
+        <li>{{ one.title }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>No fruits in your search criteria.</p>
+{% endif %}

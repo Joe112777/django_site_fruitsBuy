@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+	<head>
+	<meta charset="UTF-8"/>
+<p>你找的產品是:<strong>{{ query }}</strong><p>
+{% if fruits %}
+    <p>找到 {{ fruits|length }} 種產品 {{ fruits|pluralize }}.</p>
+    <ul>
+        {% for one in fruits %}
+        <li>{{ one.title }} 價格 {{one.price}}元</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>沒有找到你想要的產品</p>
+{% endif %}
